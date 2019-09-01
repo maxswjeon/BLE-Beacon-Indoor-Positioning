@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12D4ECC5-47D0-46C5-B1DE-3C295C1D99D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BeaconManager</RootNamespace>
+    <AssemblyName>BeaconManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=4.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.4.8.1\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\BeaconIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BeaconIcon.Designer.cs">
+      <DependentUpon>BeaconIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BeaconItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BeaconItem.Designer.cs">
+      <DependentUpon>BeaconItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModuleIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ModuleIcon.Designer.cs">
+      <DependentUpon>ModuleIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\InterfaceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\InterfaceDialog.Designer.cs">
+      <DependentUpon>InterfaceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PropertyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PropertyDialog.Designer.cs">
+      <DependentUpon>PropertyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataForm.Designer.cs">
+      <DependentUpon>DataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataViewForm.Designer.cs">
+      <DependentUpon>DataViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LiveDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LiveDataForm.Designer.cs">
+      <DependentUpon>LiveDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LocateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LocateForm.Designer.cs">
+      <DependentUpon>LocateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\BeaconPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\BeaconPanel.Designer.cs">
+      <DependentUpon>BeaconPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\WaitPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\WaitPanel.Designer.cs">
+      <DependentUpon>WaitPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Types\Beacon.cs" />
+    <Compile Include="Types\BeaconModule.cs" />
+    <Compile Include="Forms\ScanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScanForm.Designer.cs">
+      <DependentUpon>ScanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\Geometry\MCircle.cs" />
+    <Compile Include="Types\EthernetInterface.cs" />
+    <Compile Include="Types\Geometry\MLine.cs" />
+    <Compile Include="Types\RawBeacon.cs" />
+    <Compile Include="Types\Geometry\MPoint.cs" />
+    <Compile Include="Utilities\KalmanFilter.cs" />
+    <Compile Include="Utilities\NetworkManager.cs" />
+    <EmbeddedResource Include="Controls\BeaconIcon.resx">
+      <DependentUpon>BeaconIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BeaconItem.resx">
+      <DependentUpon>BeaconItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ModuleIcon.resx">
+      <DependentUpon>ModuleIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InterfaceDialog.resx">
+      <DependentUpon>InterfaceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PropertyDialog.resx">
+      <DependentUpon>PropertyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataForm.resx">
+      <DependentUpon>DataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataViewForm.resx">
+      <DependentUpon>DataViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScanForm.resx">
+      <DependentUpon>ScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocateForm.resx">
+      <DependentUpon>LocateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\BeaconPanel.resx">
+      <DependentUpon>BeaconPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\WaitPanel.resx">
+      <DependentUpon>WaitPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

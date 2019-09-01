@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Logs">
+      <UniqueIdentifier>{18a45b0b-9e95-4133-b5f1-df163d46f2fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Logs\LogItem.h">
+      <Filter>Logs</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Logs\Logger.h">
+      <Filter>Logs</Filter>
+    </ClInclude>
+    <ClInclude Include="include\main.h" />
+    <ClInclude Include="include\protocol.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Logs\LogItem.cpp">
+      <Filter>Logs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Logs\Logger.cpp">
+      <Filter>Logs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+</Project>
